@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Gothic&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --Darkest: #232339;
+  --lightest: #e2e6ee;
+  --primary-gradient-color1: #a478e8;
+  --primary-gradient-color2: #516cf7;
+  --gray-light: #acb1c3;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+/*Cover Letter Styles*/
+body {
+  background-color: var(--Darkest);
+  color: var(--lightest);
+  max-width: 100vw;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  text-align: justify;
+}
+header {
+  & .header-content {
+    margin: 48px 0px 24px 0px;
+
+    & .header-main {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+      & img {
+        max-width: 80px;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+
+      & .header-main-info {
+        height: 100%;
+        & p {
+          font-weight: 400;
+          font-size: 30px;
+        }
+
+        & span {
+          background-image: linear-gradient(
+            to right,
+            var(--primary-gradient-color1),
+            var(--primary-gradient-color2)
+          );
+          background-clip: text;
+          color: transparent;
+          font-weight: 600;
+          font-size: 20px;
+        }
+      }
+    }
+
+    & .contacts {
+      display: flex;
+
+      & .column {
+        display: flex;
+        margin-right: 32px;
+
+        & img {
+          width: 30px;
+        }
+
+        & .info {
+          margin-left: 15px;
+
+          & span {
+            color: var(--gray-light);
+            font-size: 13px;
+          }
+
+          & p {
+            margin-top: 3px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  & section {
+    .cover-main-content {
+      margin-top: 25px;
+
+      & p {
+        margin-bottom: 25px;
+        font-weight: 300;
+        font-size: large;
+      }
+    }
+  }
+}
