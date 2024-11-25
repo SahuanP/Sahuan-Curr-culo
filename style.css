@@ -22,9 +22,33 @@ body {
   padding-right: 20vw;
   text-align: justify;
 }
+
+body .page-lang {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 25px;
+  & .single-lang {
+    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+    & img {
+      width: 50px;
+    }
+
+    & img:hover {
+      scale: 120%;
+      transition: 0.3s ease-out;
+    }
+  }
+}
+
 header {
   & .header-content {
-    margin: 48px 0px 24px 0px;
+    margin: 28px 0px 24px 0px;
 
     & .header-main {
       display: flex;
@@ -59,7 +83,7 @@ header {
 
     & .contacts {
       display: flex;
-
+      flex-wrap: wrap;
       & .column {
         display: flex;
         margin-right: 32px;

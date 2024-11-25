@@ -8,6 +8,20 @@
   </head>
   <body>
     <header>
+      <div class="page-lang">
+        <div class="single-lang" id="pt">
+          <img src="./img/brasil.png" alt="Português" />
+          <span>Pt</span>
+        </div>
+        <div class="single-lang" id="en">
+          <img src="./img/reino-unido.png" alt="English" />
+          <span>En</span>
+        </div>
+        <div class="single-lang" id="es">
+          <img src="./img/espanha.png" alt="Espanhol" />
+          <span>Es</span>
+        </div>
+      </div>
       <div class="header-content">
         <div class="header-main">
           <img
@@ -16,7 +30,7 @@
           />
           <div class="header-main-info">
             <p>Sahuan Pimentel</p>
-            <span>Desenvolvedor Front-End</span>
+            <span data-key="role">Desenvolvedor Front-End</span>
           </div>
         </div>
 
@@ -31,14 +45,14 @@
           <div class="column">
             <img src="./img/Phone.svg" alt="Ícone de Telefone" />
             <div class="info">
-              <span>Telefone</span>
+              <span data-key="phone">Telefone</span>
               <p>+55 28 999134192</p>
             </div>
           </div>
           <div class="column">
             <img src="./img/Location.svg" alt="Ícone de Local" />
             <div class="info">
-              <span>Endereço</span>
+              <span data-key="adress">Endereço</span>
               <p>Alegre-ES, Brasil</p>
             </div>
           </div>
@@ -48,11 +62,11 @@
 
     <section>
       <div class="cover-main-content">
-        <p>
+        <p data-key="description1">
           Sou um Desenvolvedor Front-End e tenho experiência em criação de
           aplicações e sites responsivos na WEB.
         </p>
-        <p>
+        <p data-key="description2">
           Na área de Front-End tenho conhecimento em HTML, CSS, JavaScript, Git
           e GitHub. Estou constantemente desenvolvendo projetos pessoais para
           expandir meu conhecimento nas áreas que já conheco e praticar boas
@@ -61,7 +75,7 @@
           framework Vue.JS em busca de conseguir uma vaga de estágio e
           posteriormente me tornar um programador profissional.
         </p>
-        <p>
+        <p data-key="description3">
           Atualmente curso Sistemas de Informação, venho migrado do curso de
           Ciência da Computação, onde cursei metade da formação e resolvi trocar
           por me identificar mais com as oportunidades e tecnologias ensinadas
@@ -70,5 +84,6 @@
         </p>
       </div>
     </section>
+    <script src="./script.js"></script>
   </body>
 </html>
