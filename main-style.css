@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Gothic&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
-  --Darkest: #232339;
+  --gray-darker: #2e2e48;
+  --darkest: #232339;
   --lightest: #e2e6ee;
   --primary-gradient-color1: #a478e8;
   --primary-gradient-color2: #516cf7;
@@ -14,7 +15,7 @@
 }
 
 body {
-  background-color: var(--Darkest);
+  background-color: var(--gray-darker);
   color: var(--lightest);
   max-width: 100vw;
   display: flex;
@@ -23,6 +24,7 @@ body {
 body .aside-container {
   width: 25vw;
   padding: 40px 30px 0 30px;
+  background-color: var(--darkest);
   & .profile-pic {
     width: 100%;
     height: 170px;
@@ -173,6 +175,7 @@ body .aside-container {
 
 body .main-content {
   padding-top: 40px;
+  margin-left: 25px;
   width: 75vw;
 
   & .cover-letter {
@@ -185,8 +188,8 @@ body .main-content {
       cursor: pointer;
     }
     & img {
-      width: 40px;
-      height: 40px;
+      width: 35px;
+      height: 35px;
       margin-right: 10px;
     }
 
@@ -205,5 +208,69 @@ body .main-content {
       color: transparent;
       transition: 0.2s;
     }
+  }
+}
+
+body .main-content .container {
+  margin-top: 45px;
+  padding: 0 10% 0 15px;
+  border-left: 2px solid var(--darkest);
+
+  & span {
+    color: var(--gray-light);
+  }
+
+  & .container-title {
+    margin-bottom: 10px;
+    transform: translateY(-50%);
+
+    & h2 {
+      font-weight: 400;
+    }
+  }
+
+  & .xp-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    background-color: var(--darkest);
+    padding: 15px 30px;
+    border-radius: 10px;
+
+    & .role {
+      display: flex;
+      align-items: center;
+
+      & img {
+        width: 55px;
+        height: 55px;
+        border-radius: 7px;
+      }
+
+      & .role-info {
+        margin-left: 14px;
+      }
+    }
+    & .xp-time {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      & .local {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        & img {
+          margin-right: 7px;
+        }
+      }
+    }
+  }
+
+  & .xp-row:hover {
+    scale: 101%;
+    transform: translateY(-1%);
+    transition: 0.1s ease-out;
+    box-shadow: 2px 2px var(--primary-gradient-color2);
   }
 }
