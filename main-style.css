@@ -178,16 +178,16 @@ body .main-content {
   padding-top: 40px;
   margin-left: 25px;
   width: 75vw;
+  & a {
+    text-decoration: none;
+    color: var(--primary-gradient-color2);
+    cursor: pointer;
+  }
 
   & .cover-letter {
     display: flex;
     align-items: center;
 
-    & a {
-      text-decoration: none;
-      color: var(--lightest);
-      cursor: pointer;
-    }
     & img {
       width: 35px;
       height: 35px;
@@ -201,13 +201,13 @@ body .main-content {
 
     & a:hover {
       background-image: linear-gradient(
-        to right,
-        var(--primary-gradient-color1),
+        to left,
+        var(--primary-gradient-color1) 50%,
         var(--primary-gradient-color2)
       );
       background-clip: text;
       color: transparent;
-      transition: 0.2s;
+      transition: 0.5s;
     }
   }
 }
@@ -230,6 +230,62 @@ body .main-content .container {
     }
   }
 
+  & .xp-row:hover {
+    scale: 101%;
+    transform: translateY(-1%);
+    transition: 0.1s ease-out;
+    box-shadow: 3px 3px var(--primary-gradient-color2);
+  }
+}
+
+body .main-content .projects {
+  & .project-line {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  & .project {
+    background-color: var(--darkest);
+    width: 40%;
+    padding: 25px;
+    border-radius: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+    & .proj-img {
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      & img {
+        max-width: 100%;
+        background-image: cover;
+        cursor: pointer;
+      }
+    }
+
+    & .proj-img:hover {
+      background-color: var(--gray-darker);
+      transition: ease-out 0.3s;
+    }
+    & img:hover {
+      scale: 130%;
+      transition: ease-in-out 0.2s;
+    }
+
+    .proj-bottom {
+      width: 70%;
+      & .proj-bottom-link {
+        display: flex;
+        align-items: center;
+
+        & img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+}
+
+body .main-content .experience {
   & .xp-row {
     display: flex;
     width: 100%;
@@ -269,13 +325,6 @@ body .main-content .container {
       }
     }
   }
-
-  & .xp-row:hover {
-    scale: 101%;
-    transform: translateY(-1%);
-    transition: 0.1s ease-out;
-    box-shadow: 3px 3px var(--primary-gradient-color2);
-  }
 }
 
 body .main-content .skills {
@@ -305,9 +354,11 @@ body .main-content .skills {
     }
     & .group-skills {
       display: flex;
+      justify-content: flex-start;
       margin-left: 50px;
       flex-wrap: wrap;
       padding: 15px 30px;
+      width: 100%;
 
       & .block {
         display: flex;
@@ -315,8 +366,9 @@ body .main-content .skills {
         background-color: var(--darkest);
         padding: 15px;
         justify-content: center;
-        margin-left: 7px;
+        align-items: center;
         margin-bottom: 7px;
+        margin-right: 4px;
         height: auto;
       }
 
