@@ -244,20 +244,21 @@ body .main-content .projects {
     flex-wrap: wrap;
   }
   & .project {
+    display: flex;
     background-color: var(--darkest);
-    width: 40%;
-    padding: 25px;
+    width: 45%;
+    padding: 20px;
     border-radius: 10px;
     margin-right: 10px;
     overflow: hidden;
+    margin-bottom: 5px;
     & .proj-img {
       width: 100%;
       border-radius: 10px;
       overflow: hidden;
+
       & img {
         max-width: 100%;
-        background-image: cover;
-        cursor: pointer;
       }
     }
 
@@ -266,19 +267,37 @@ body .main-content .projects {
       transition: ease-out 0.3s;
     }
     & img:hover {
-      scale: 130%;
+      scale: 120%;
       transition: ease-in-out 0.2s;
     }
 
     .proj-bottom {
-      width: 70%;
+      margin-top: 20px;
+      margin-left: 20px;
+      & span {
+        margin-top: 15px;
+        font-size: large;
+      }
+
+      & p {
+        margin-top: 5px;
+        font-weight: 300;
+      }
+
       & .proj-bottom-link {
         display: flex;
         align-items: center;
+        margin-top: 15px;
 
         & img {
           width: 25px;
           height: 25px;
+          margin-right: 7px;
+        }
+
+        & a {
+          font-size: large;
+          font-weight: 400;
         }
       }
     }
@@ -382,4 +401,13 @@ body .main-content .skills {
       }
     }
   }
+}
+
+body .main-content .educations {
+  & .education-row {
+    display: flex;
+  }
+}
+
+@media screen and (max-device-width: 1300px) {
 }
