@@ -230,7 +230,8 @@ body .main-content .container {
     }
   }
 
-  & .xp-row:hover {
+  & .xp-row:hover,
+  .education-row:hover {
     scale: 101%;
     transform: translateY(-1%);
     transition: 0.1s ease-out;
@@ -406,8 +407,72 @@ body .main-content .skills {
 body .main-content .educations {
   & .education-row {
     display: flex;
+    background-color: var(--darkest);
+    width: 80%;
+    justify-content: space-between;
+    margin: 7px 0;
+    padding: 15px 30px;
+    align-items: center;
+    border-radius: 10px;
+
+    & .education {
+      display: flex;
+      align-items: center;
+      & img {
+        width: 55px;
+        height: 55px;
+        border-radius: 7px;
+      }
+
+      & .education-info {
+        margin-left: 14px;
+      }
+
+      & .education-time {
+        display: flex;
+      }
+    }
   }
 }
 
-@media screen and (max-device-width: 1300px) {
+@media screen and (max-device-width: 843px) {
+  body .aside-container {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    padding: 0;
+    border-bottom: 2px solid var(--lightest);
+    z-index: 1;
+
+    & .quote,
+    .group {
+      display: none;
+    }
+  }
+
+  body .aside-container .profile-pic {
+    width: 50%;
+
+    & img {
+      border-radius: 0 3px 3px 0;
+    }
+  }
+
+  body .aside-container header {
+    width: 45%;
+    transform: translate(-5%, -30%);
+
+    & h3 {
+      font-size: large;
+    }
+
+    & span {
+      font-size: medium;
+    }
+  }
+
+  body .main-content {
+    padding-top: 200px;
+  }
 }
