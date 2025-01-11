@@ -501,6 +501,12 @@ body .main-content .educations {
       border: none;
     }
 
+    & .experience {
+      & .xp-row {
+        width: 100%;
+      }
+    }
+
     & .projects {
       & .project-line {
         padding-right: 0;
